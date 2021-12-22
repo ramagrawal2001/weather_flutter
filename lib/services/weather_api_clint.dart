@@ -9,7 +9,6 @@ class weatherApiClient {
         "https://api.openweathermap.org/data/2.5/weather?q=$location&appid=6853072a9e21d907729b203aa0c123ff&units=metric");
     var response = await http.get(endpoint);
     var body = jsonDecode(response.body);
-    print(Weather.fromJson(body).temp);
     return Weather.fromJson(body);
   }
 }
